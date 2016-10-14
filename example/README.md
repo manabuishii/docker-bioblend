@@ -92,10 +92,12 @@ Traceback (most recent call last):
 bioblend.ConnectionError: Unexpected HTTP status code: 400: {"err_msg": "No information is available for the requested repository revision.\nOne or more of the following parameter values is likely invalid:\ntool_shed_url: https://toolshed.g2.bx.psu.edu/\nname: fastqc\nowner: devteam222\nchangeset_revision: 3fdc1a74d866\n", "err_code": 400008}
 ```
 
-# success
+## success
 
 ```
 $ docker run --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/to
 olshed_tool_install_to_your_galaxy.py
 [{u'tool_shed_status': {u'latest_installable_revision': u'True', u'revision_update': u'False', u'revision_upgrade': u'False', u'repository_deprecated': u'False'}, u'status': u'Installed', u'name': u'fastqc', u'deleted': False, u'ctx_rev': u'7', u'error_message': u'', u'installed_changeset_revision': u'3fdc1a74d866', u'tool_shed': u'toolshed.g2.bx.psu.edu', u'dist_to_shed': False, u'url': u'/api/tool_shed_repositories/f2db41e1fa331b3e', u'id': u'f2db41e1fa331b3e', u'owner': u'devteam', u'uninstalled': False, u'changeset_revision': u'3fdc1a74d866', u'includes_datatypes': False}, {u'tool_shed_status': None, u'status': u'New', u'name': u'package_fastqc_0_11_4', u'deleted': False, u'ctx_rev': u'2', u'error_message': u'', u'installed_changeset_revision': u'a8f485b2efd9', u'tool_shed': u'toolshed.g2.bx.psu.edu', u'dist_to_shed': False, u'url': u'/api/tool_shed_repositories/f597429621d6eb2b', u'id': u'f597429621d6eb2b', u'owner': u'iuc', u'uninstalled': False, u'changeset_revision': u'a8f485b2efd9', u'includes_datatypes': False}]
 ```
+
+
