@@ -10,7 +10,7 @@
 ## Using Docker Galaxy Stable
 
 ```
-docker run -d -p 20080:80 bgruening/galaxy-stable:latest
+docker run -d --name dockergalaxy -p 20080:80 bgruening/galaxy-stable:latest
 ```
 
 # Connect to Galaxy by using Bioblend
