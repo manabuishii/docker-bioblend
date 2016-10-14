@@ -35,7 +35,7 @@ gi = galaxy.GalaxyInstance(url='http://127.0.0.1:8000', key='your_api_key')
 hl = gi.histories.get_histories()
 ```
 
-## example
+# Example
 
 ### first start docker galaxy
 
