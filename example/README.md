@@ -108,7 +108,81 @@ olshed_tool_install_to_your_galaxy.py
 Get workflow list in your container
 
 ```
-$ docker run  --link dockergalaxy:dockergalaxy  -v $PWD:/work
---rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_get_workflows.py
+$ docker run  --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_get_workflows.py
 [{u'name': u'Testworkflow', u'tags': [], u'deleted': False, u'latest_workflow_uuid': u'809c768a-59f1-4d9d-90c8-701ddf43b536', u'url': u'/api/workflows/f2db41e1fa331b3e', u'published': False, u'owner': u'admin', u'model_class': u'StoredWorkflow', u'id': u'f2db41e1fa331b3e'}]
+```
+
+## Export workflow as json
+
+
+```
+docker run  --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_export_workflow_json.py
+```
+
+### Pretty Print
+
+```
+$ docker run -e PRETTY_PRINT=True --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_export_workflow_json.py
+```
+
+```
+{
+  "a_galaxy_workflow": "true", 
+  "format-version": "0.1", 
+  "name": "Testworkflow", 
+  "steps": {
+    "0": {
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.65", 
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.65", 
+      "uuid": "19ac4c29-bf33-4420-8630-1aa8f2bc8f41", 
+      "tool_version": "0.65", 
+      "outputs": [
+        {
+          "type": "html", 
+          "name": "html_file"
+        }, 
+        {
+          "type": "txt", 
+          "name": "text_file"
+        }
+      ], 
+      "post_job_actions": {}, 
+      "workflow_outputs": [], 
+      "annotation": "", 
+      "input_connections": {}, 
+      "inputs": [
+        {
+          "name": "contaminants", 
+          "description": "runtime parameter for tool FastQC"
+        }, 
+        {
+          "name": "limits", 
+          "description": "runtime parameter for tool FastQC"
+        }, 
+        {
+          "name": "input_file", 
+          "description": "runtime parameter for tool FastQC"
+        }
+      ], 
+      "tool_errors": null, 
+      "position": {
+        "top": 248.5, 
+        "left": 253.5
+      }, 
+      "tool_state": "{\"__page__\": 0, \"contaminants\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"limits\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+      "label": null, 
+      "type": "tool", 
+      "id": 0, 
+      "tool_shed_repository": {
+        "owner": "devteam", 
+        "changeset_revision": "3fdc1a74d866", 
+        "name": "fastqc", 
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      }, 
+      "name": "FastQC"
+    }
+  }, 
+  "annotation": "", 
+  "uuid": "809c768a-59f1-4d9d-90c8-701ddf43b536"
+}
 ```
