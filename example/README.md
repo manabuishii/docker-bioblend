@@ -194,3 +194,28 @@ $ docker run -e PRETTY_PRINT=True --link dockergalaxy:dockergalaxy  -v $PWD:/wor
   "uuid": "809c768a-59f1-4d9d-90c8-701ddf43b536"
 }
 ```
+
+## Workflow export to local path
+
+```
+docker run  --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_export_workflow_to_local_path.py
+```
+
+TODO
+[ ] Set path
+[ ] Set filename
+[ ] File permission
+
+## Workflow import from local path
+
+```
+docker run --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_import_workflow_from_local_path.py /work/Galaxy -Workflow-Testworkflow.ga
+```
+
+## Workflow export json
+
+export json but currently not json format python dict
+
+```
+docker run  --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_export_workflow_json.py
+```
