@@ -13,6 +13,13 @@
 docker run -d --name dockergalaxy -p 20080:80 bgruening/galaxy-stable:latest
 ```
 
+
+### logs
+
+```
+docker logs -f dockergalaxy
+```
+
 # Connect to Galaxy by using Bioblend
 
 [See official document](http://bioblend.readthedocs.io/en/latest/api_docs/galaxy/all.html)
