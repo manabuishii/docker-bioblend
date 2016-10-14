@@ -2,8 +2,9 @@
 
 * Check your galaxy intance url is valid
 * Check toolshed url is that you want
- * Released [https://toolshed.g2.bx.psu.edu/](https://toolshed.g2.bx.psu.edu/)
- * Test [https://testtoolshed.g2.bx.psu.edu/](https://testtoolshed.g2.bx.psu.edu/)
+ * Released Repository [https://toolshed.g2.bx.psu.edu/](https://toolshed.g2.bx.psu.edu/)
+ * Test Repository [https://testtoolshed.g2.bx.psu.edu/](https://testtoolshed.g2.bx.psu.edu/)
+
 # Start Galaxy
 
 
