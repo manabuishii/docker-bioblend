@@ -101,3 +101,14 @@ olshed_tool_install_to_your_galaxy.py
 ```
 
 
+# Workflow
+
+## Workflow list
+
+Get workflow list in your container
+
+```
+$ docker run  --link dockergalaxy:dockergalaxy  -v $PWD:/work
+--rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_get_workflows.py
+[{u'name': u'Testworkflow', u'tags': [], u'deleted': False, u'latest_workflow_uuid': u'809c768a-59f1-4d9d-90c8-701ddf43b536', u'url': u'/api/workflows/f2db41e1fa331b3e', u'published': False, u'owner': u'admin', u'model_class': u'StoredWorkflow', u'id': u'f2db41e1fa331b3e'}]
+```

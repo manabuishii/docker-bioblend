@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 """
-Install toolshed tool list into your Galaxy
+Workflow list into your Galaxy
 """
 import os
 from bioblend import galaxy
