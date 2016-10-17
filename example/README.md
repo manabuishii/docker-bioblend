@@ -209,7 +209,7 @@ TODO
 ## Workflow import from local path
 
 ```
-docker run --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_import_workflow_from_local_path.py /work/Galaxy -Workflow-Testworkflow.ga
+docker run --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_import_workflow_from_local_path.py /work/Galaxy-Workflow-Testworkflow.ga
 ```
 
 ## Workflow export json
