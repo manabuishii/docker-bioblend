@@ -219,3 +219,10 @@ export json but currently not json format python dict
 ```
 docker run  --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_export_workflow_json.py
 ```
+
+
+# Workflow and tool import
+
+```
+docker run --link dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0.8.0 python /work/workflow_import_workflow_from_local_path_and_tools.py /work/Galaxy-Workflow-Testworkflow.ga
+```
