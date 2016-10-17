@@ -53,9 +53,5 @@ for k in tools:
                                         install_tool_dependencies=install_tool_dependencies,
                                         install_repository_dependencies=install_repository_dependencies)
      
-   
-
-#gi = galaxy.GalaxyInstance(url=galaxy_url, key=api_key)
-
-#ej = gi.workflows.import_workflow_from_local_path(workflow_filename)
+ej = gi.workflows.import_workflow_from_local_path(workflow_filename)
 
