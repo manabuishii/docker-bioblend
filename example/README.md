@@ -195,6 +195,22 @@ $ docker run -e PRETTY_PRINT=True --link dockergalaxy:dockergalaxy  -v $PWD:/wor
 }
 ```
 
+### Error if there are missing_tools
+
+```
+$ docker run -e PRETTY_PRINT=True --link
+ dockergalaxy:dockergalaxy  -v $PWD:/work --rm manabuishii/docker-bioblend:0
+.8.0 python /work/workflow_export_workflow_json.py
+Traceback (most recent call last):
+  File "/work/workflow_export_workflow_json.py", line 24, in <module>
+    ej = gi.workflows.export_workflow_json(workflow_id)
+  File "/usr/local/lib/python2.7/site-packages/bioblend/galaxy/workflows/__init__.py", line 155, in export_workflow_json
+    return Client._get(self, url=url)
+  File "/usr/local/lib/python2.7/site-packages/bioblend/galaxy/client.py", line 133, in _get
+    status_code=r.status_code)
+bioblend.ConnectionError: GET: error 400: '{"err_msg": "Workflow cannot be exported due to missing tools.", "err_code": 0}', 0 attempts left: {"err_msg": "Workflow cannot be exported due to missing tools.", "err_code": 0}
+```
+
 ## Workflow export to local path
 
 ```
