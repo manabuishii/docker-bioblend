@@ -1,3 +1,3 @@
 # bioblend in docker
 
-bioblend version 0.8.0
+bioblend version 0.9.0
